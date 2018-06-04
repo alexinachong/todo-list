@@ -38,6 +38,7 @@ class TodoForm extends React.Component {
 							placeholder="Add todo..."
 							className="todo-input"
 							id="todo-field"
+              autoFocus
 						/>
           </label>
           <input type="submit" value="Add!" className="form-buttons" />

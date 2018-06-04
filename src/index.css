@@ -36,10 +36,6 @@ body {
   font-size: 1.5em;
   padding: 5px;
   width: 600px;
-  text-align: center;
-}
-
-.todo-input:focus {
 }
 
 .form-buttons {
@@ -69,4 +65,8 @@ body {
 
 .delete-buttons:hover {
   color: red;
+}
+
+.todo-items {
+  
 }
