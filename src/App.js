@@ -10,9 +10,11 @@ class App extends Component {
     return (
       <div className="container">
         <h1>Todo List</h1>
-        <TodoFormContainer />
-        <br />
-        <TodoListContainer />
+        <div className="form-and-list">
+          <TodoFormContainer />
+          <br />
+          <TodoListContainer />
+        </div>
       </div>
     );
   }
