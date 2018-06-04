@@ -6,9 +6,13 @@ class TodoList extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.setState({ todos: this.props.todos });
+  }
+
   componentWillReceiveProps(newProps) {
     this.setState({
-
+      todos: newProps.todos
     });
   }
 
@@ -18,9 +22,10 @@ class TodoList extends React.Component {
         <div className="todo-items-container">
           {this.props.todos.map(todo => (
             <TodoItem
+              key={todo.todoId}
               removeTodo={this.props.removeTodo}
               todo={todo}
-            />
+              />
           ))}
         </div>
       </div>

@@ -4,7 +4,6 @@ import './App.css';
 
 import TodoFormContainer from './components/todo_form/todo_form_container';
 import TodoListContainer from './components/todo_list/todo_list_container';
-// import TodoListContainer, etc 
 
 class App extends Component {
   render() {

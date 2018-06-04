@@ -3,16 +3,16 @@ import { addTodo, removeTodo } from '../../actions/todo_actions';
 import TodoList from './todo_list';
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-    todos: state.todos
-  };
+  return ({
+    todos: Object.keys(state.todos).map(todoId => state.todos[todoId])
+  });
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
+  return ({
     addTodo: todo => dispatch(addTodo(todo)),
     removeTodo: todoId => dispatch(removeTodo(todoId))
-  };
+  });
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

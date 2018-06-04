@@ -1,8 +1,11 @@
 export const ADD_TODO = 'ADD_TODO';
 export const REMOVE_TODO = 'REMOVE_TODO';
 
+let idNum = 0;
+
 export const addTodo = todo => ({
   type: ADD_TODO,
+  todoId: idNum++,
   todo: todo
 });
 
