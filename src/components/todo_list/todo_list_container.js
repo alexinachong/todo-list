@@ -4,7 +4,7 @@ import TodoList from './todo_list';
 
 const mapStateToProps = (state, ownProps) => {
   return ({
-    todos: Object.keys(state.todos).map(todoId => state.todos[todoId])
+    todos: Object.keys(state.todos).map(todoId => state.todos[todoId]) // 1, hello
   });
 };
 

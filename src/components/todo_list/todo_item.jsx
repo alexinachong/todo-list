@@ -3,7 +3,7 @@ import React from 'react';
 const TodoItem = ({todo, removeTodo}) => {
   return (
     <div className="todo-items">
-      <button onClick={() => removeTodo(todo.todoId)} className="delete-buttons">X</button> {todo.todo}
+      <button onClick={() => removeTodo(todo.todoId)} className="delete-buttons">X</button> {todo.priority} {todo.todo}
     </div>
   );
 };
