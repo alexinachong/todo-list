@@ -30,6 +30,30 @@ class TodoList extends React.Component {
     return sorted;
   }
 
+  // DEBUG BELOW 
+  update(id, field) {
+    return e =>
+      this.setState({
+        [field]: e.currentTarget.value
+      });
+  }
+
+  overwriteTodo(todoText) {
+    console.warn(todoText);
+    return (
+      <input
+        type="text"
+        value={todoText}
+        onChange={this.update('todo')}
+        placeholder="Add todo..."
+        className="todo-input"
+        id="todo-field"
+        autoFocus
+      />
+    );
+  }
+  // DEBUG ABOVE
+
   render() {
     return (
       <div className="todo-list">
@@ -38,6 +62,8 @@ class TodoList extends React.Component {
             <TodoItem
               key={todo.todoId}
               removeTodo={this.props.removeTodo}
+              updateTodo={this.props.updateTodo}
+              overwriteTodo={this.overwriteTodo}
               todo={todo}
               />
           ))}
