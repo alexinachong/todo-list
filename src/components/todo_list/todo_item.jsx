@@ -1,6 +1,9 @@
 import React from 'react';
 
 // TODO: Add overwrite function
+// class TodoItem extends React.Component {
+//
+// }
 
 const TodoItem = ({todo, removeTodo, updateTodo, overwriteTodo }) => {
   return (
